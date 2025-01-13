@@ -8,6 +8,7 @@
     ($\\$, $without$),
     ($+-$, $plus.minus$),
     ($<=>$, $arrow.l.r.double.long$),
+    ($|$, $mid(|)$), // to use in sets
     ($..$, $quad$),
     ($--$, $quad$),
     // ($...$, $dots$),
