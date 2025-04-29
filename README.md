@@ -1,8 +1,17 @@
-# Scribe
+# scribe
 
-> a collection of functions and show rules to make typst's math markup more readable.
-Ideally I would like to be able to write maths in ascii all together,
-without ever having to look at a generated pdf.
-I think typst's math markup is a really good starting point for that.
+**Scribe** exports a set of `show-rules` designed to make Typst’s mathematical markup more readable. The ultimate aim is to produce an `ASCII`-based notation that closely mirrors the familiar style of written mathematics.
 
-The goal is to arrive at a ascii text representation that is close to common notation for written math.
+```typst
+#import "@preview/scribe:0.0.2" as fletcher: diagram, node, edge
+
+With scribe you can write 
+
+```typst
+$Ff * (f @ g)(x) \\ {0} == +-1 .. (1 % n)$
+
+```
+instead of
+```typst
+$cal(F) dot.op (f compose g)(x) without {0} equiv plus.minus 1 quad (1 mod n)$
+```
