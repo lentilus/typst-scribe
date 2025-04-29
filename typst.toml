@@ -1,10 +1,16 @@
 [package]
-name = "readable-code"
-version = "0.0.2"
+name = "scribe"
+version = "0.1.0"
 entrypoint = "src/lib.typ"
 authors = ["lentilus"]
 license = "MIT"
-description = "foo"
-repository = "https://github.com/lentilus/readable-typst"
+description = "Write math in ascii notation."
+repository = "https://github.com/lentilus/typst-scribe"
 exclude = ["README.md"]
 categories = ["utility"]
+keywords = [
+  "shorthands",
+  "notation",
+  "ascii",
+  "caligraphic"
+]
