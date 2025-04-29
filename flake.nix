@@ -44,14 +44,7 @@
 
             cd $out
 
-            cat > test.typ <<'EOF'
-              #import "@preview/scribe:0.1.0" : scribe
-              #show: scribe
-              
-              The equation
-              $x = (1 + 2) * 3$
-              should render correctly.
-            EOF
+            cp ${./tests/scribe.typ} test.typ
           
             # 3) compile the Typst file, using our package path
             typst compile test.typ test.pdf \

@@ -1,4 +1,4 @@
-#import "deps.typ": *
+#import "deps.typ": shorthands
 
 #let operations = shorthands.with(
   ($@$, $compose$),
