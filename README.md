@@ -6,7 +6,7 @@ Large parts of it are derived from [asciimath](http://asciimath.org).
 
 All you need to do is to import the following.
 ```typst
-#import "@preview/scribe:0.1.0": *
+#import "@preview/scribe:0.2.0": *
 #show: scribe
 
 With scribe you can write 
@@ -21,7 +21,7 @@ $cal(F) dot.op (f compose g)(x) without {0} equiv plus.minus 1 quad (mod n)$
 
 It is possible to only use a subset of the features.
 ```typst
-#import "@preview/scribe:0.1.0": operations
+#import "@preview/scribe:0.2.0": operations
 #import operations: *
 
 #show: scribe-operations
