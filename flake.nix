@@ -13,7 +13,7 @@
 
         scribe = pkgs.buildTypstPackage {
           pname   = "scribe";
-          version = "0.1.0";
+          version = "0.2.0";
           src     = ./.;
         };
         quick-maths = pkgs.typstPackages.quick-maths_0_2_1;

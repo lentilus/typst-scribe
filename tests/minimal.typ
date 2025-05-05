@@ -1,4 +1,4 @@
-#import "@preview/scribe:0.1.0": *
+#import "@preview/scribe:0.2.0": *
 #show: scribe
 
 With scribe you can write 

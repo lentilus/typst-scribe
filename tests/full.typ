@@ -1,4 +1,4 @@
-#import "@preview/scribe:0.1.0": *
+#import "@preview/scribe:0.2.0": *
 #show: scribe-operations
 #show: scribe-miscellaneous
 #show: scribe-relations
