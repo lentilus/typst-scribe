@@ -28,7 +28,7 @@ It is possible to only use a subset of the features.
 ```
 
 ## Index
-Below is a complete list of everything that is supported.
+Below is a complete list of everything that is supported. Unsupported symbols are marked with an empty cell.
 <div align="center">
   <img src="./assets/full1.svg" />
   <img src="./assets/full2.svg" />
