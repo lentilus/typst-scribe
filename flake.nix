@@ -16,21 +16,29 @@
           version = "0.1.0";
           src     = ./.;
         };
+        quick-maths = pkgs.typstPackages.quick-maths_0_2_1;
       in
       {
         packages.default = scribe;
 
         devShells.default = pkgs.mkShellNoCC {
+          shellHook = ''
+          tmpdir=$(mktemp -d)
+          mkdir -p $tmpdir/preview
+          cp -r ${scribe}/lib/typst-packages/* $tmpdir/preview/
+          cp -r ${quick-maths}/lib/typst-packages/* $tmpdir/preview/
+
+          export TYPST_PACKAGE_CACHE_PATH=$tmpdir
+          '';
           buildInputs = [
             pkgs.typst
             pkgs.tinymist
             scribe
+            quick-maths
           ];
         };
 
-        checks.default = let
-          quick-maths = pkgs.typstPackages.quick-maths_0_2_0;
-        in pkgs.runCommand "check-scribe" {
+        checks.default = pkgs.runCommand "check-scribe" {
           buildInputs = [
             pkgs.typst
             quick-maths
@@ -44,11 +52,12 @@
 
             cd $out
 
-            cp ${./tests/scribe.typ} test.typ
-          
             # 3) compile the Typst file, using our package path
-            typst compile test.typ test.pdf \
-              --package-cache-path $out/packages
+            typst compile ${./tests/minimal.typ} \
+              --package-cache-path $out/packages minimal.pdf
+
+            typst compile ${./tests/full.typ} \
+              --package-cache-path $out/packages full.pdf
           '';
       }
     );
