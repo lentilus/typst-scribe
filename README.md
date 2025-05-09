@@ -21,10 +21,8 @@ $cal(F) dot.op (f compose g)(x) without {0} equiv plus.minus 1 quad (mod n)$
 
 It is possible to only use a subset of the features.
 ```typst
-#import "@preview/scribe:0.2.0": operations
-#import operations: *
-
-#show: scribe-operations
+#import "@preview/scribe:0.2.0": scribe, operations, logicals
+#show: scribe.with("operations", "logicals")
 ```
 
 ## Index
