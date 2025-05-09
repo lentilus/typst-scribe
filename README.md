@@ -23,6 +23,10 @@ It is possible to only use a subset of the features.
 ```typst
 #import "@preview/scribe:0.2.0": scribe, operations, logicals
 #show: scribe.with("operations", "logicals")
+
+$
+ a * b = 0 vv a +- b = 3
+$
 ```
 
 ## Index
