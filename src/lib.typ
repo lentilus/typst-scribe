@@ -12,4 +12,4 @@
 #import logicals: *
 #import relations: *
 
-#import "shorthands.typ": scribe
+#import "show-rule.typ": scribe

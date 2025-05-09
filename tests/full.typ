@@ -1,10 +1,5 @@
 #import "@preview/scribe:0.2.0": *
-#show: scribe-operations
-#show: scribe-miscellaneous
-#show: scribe-relations
-#show: scribe-grouping-brackets
-#show: scribe-logicals
-#show: scribe-caligraphics
+#show: scribe.with("operations", "miscellaneous", "relations", "grouping-brackets", "logicals", "caligraphics")
 
 // vanilla
 #let v(body) = {
@@ -133,7 +128,7 @@
   `AA`, $AA$,
   `EE`, $EE$,
   `_|_`, [],
-  `TT`, `TT`,
+  `TT`, $TT$,
   `|--`, $|--$,
   `|==`, $|==$,
 

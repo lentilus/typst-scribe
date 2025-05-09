@@ -78,14 +78,14 @@
 #let w(function-name, content) = {
   safe-wrap("miscellaneous", did-load-miscellaneous, function-name, content)
 }
-#let int = w("oint", $integral$)
+#let int = w("int", $integral$)
 #let oint = w("oint", $integral.cont$)
 #let del = w("del", $partial$)
 #let grad = w("grad", $gradient$)
 #let aleph = w("aleph", $alef$)
 #let vdots = w("vdots", $dots.v$)
 #let ddots = w("ddots", $dots.down$)
-#let ldots = w("ddots", $dots.h$)
+#let ldots = w("ldots", $dots.h$)
 
 /* RELATIONS */
 #let w(function-name, content) = {

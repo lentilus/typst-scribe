@@ -5,16 +5,13 @@
 #let did-load-miscellaneous = state("scribe-miscellaneous", false)
 #let did-load-relations = state("scribe-relations", false)
 
+// TODO: add ignore regex here.
+
 #let safe-wrap(module, is-legal, funcion-name, content) = {
   // TODO: do type assertion here
   context if is-legal.get() != true {
-    panic("SCRIBE: Illegal use of '"
-     + funcion-name
-     + "' from '"
-     + module
-     + "'. Please use the appropriate show rule, or remove '"
-     + module
-     + "' from your scribe imports.")
+    let msg = "scribe: To use '" + funcion-name + "' you must invoke scribe with '" + module + "'. E.g. 'show: scribe.with(\"" + module + "\", ...)'"
+    panic(msg)
   } 
   content
 }
